@@ -1,8 +1,0 @@
-FROM python:3
-
-ADD FlaskAPI.py /
-
-RUN pip install FlaskAPI
-RUN pip install flask-cors
-WORKDIR https://github.com/307adi/airbus_challenge
-CMD [ "python", "FlaskAPI.py","daemon off;" ]
