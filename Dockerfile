@@ -1,7 +1,7 @@
 FROM python:3.6
-COPY . /adityaCode
-WORKDIR /adityaCode
+COPY . /devops_challenge
+WORKDIR /devops_challenge
 RUN pip3 install -r requirements.txt 
 EXPOSE 8080
 ENTRYPOINT ["python"]
-CMD ["flaskAPI.py","-g","daemon off;"]
+CMD ["app.py","-g","daemon off;"]

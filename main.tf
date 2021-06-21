@@ -10,14 +10,9 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
-  access_key = "AKIARD7RandomStringMTPDACUWC4GPA"
-  secret_key = "PHJvwZVSecretKeyFXku8dYscOotuLU1g4xPb//bPpiG"
-}
-
-resource "aws_key_pair" "ubuntu" {
-  key_name   = "ubuntu"
-  public_key = file("key.pub")
+  region = "us-east-2"
+  access_key = "AKIARD7MTPDAACFBZ35E"
+  secret_key = "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"
 }
 
 resource "aws_security_group" "ubuntu" {
@@ -62,15 +57,14 @@ resource "aws_security_group" "ubuntu" {
 
 
 resource "aws_instance" "ubuntu" {
-  key_name      = aws_key_pair.ubuntu.key_name
-  ami           = "ami-03ba3948f6c37a4b0"
-  instance_type = "t2.micro"
+ ami           = "ami-00399ec92321828f5"
+ instance_type = "t2.micro"
 
-  tags = {
-    Name = "ubuntu"
-  }
+tags = {
+   Name = "ubuntu"
+ }
 
-  vpc_security_group_ids = [
+ vpc_security_group_ids = [
     aws_security_group.ubuntu.id
   ]
 
