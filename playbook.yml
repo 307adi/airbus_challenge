@@ -43,3 +43,4 @@
     - name: Print init password Jenkins
       debug:
         var: result.stdout
+        

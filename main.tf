@@ -86,3 +86,4 @@ resource "aws_eip" "ubuntu" {
   vpc      = true
   instance = aws_instance.ubuntu.id
 }
+
