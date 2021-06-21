@@ -11,8 +11,8 @@ terraform {
 
 provider "aws" {
   region = "us-east-2"
-  access_key = "AKIARD7MTPDAACFBZ35Etest"
-  secret_key = "05Q8+VgGlNfwBczn2Ud2random0eXpSXqVb5pWjnazUBAO"
+  access_key = "AKIMTPDAACFBZ5Etest"
+  secret_key = "05Q8+VgGlzn2Ud2random0eXpSXqVb5pWjnazUBAO"
 }
 
 resource "aws_security_group" "ubuntu" {
