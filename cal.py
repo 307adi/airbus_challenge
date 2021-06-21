@@ -8,10 +8,10 @@ except ValueError as e:
 
 if oprt in ops:
     try:
-        val = ops[oprt](x,y)
+        val = ops[oprt](float(x),float(y))
         print(val)
-    except ZeroDivisionError as e:
+    except ValueError as e:
         print(e)
 
 else:
-    pass
+    print("wrong operator")

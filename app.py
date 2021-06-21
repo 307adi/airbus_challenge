@@ -8,16 +8,15 @@ CORS(app)
 @app.route('/', methods=['POST','GET'])
 def getHealthTest():
     try:
-        
-        
-        message = "Welcome , This is Flask API"
+
+
+        message = "Hello Airbus"
 
     except Exception as e:
         message = e
 
-    return message        
+    return message
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host='0.0.0.0',port=8080)    
-    
+    app.run(host='0.0.0.0',port=8080)
